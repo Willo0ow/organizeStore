@@ -40,6 +40,24 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="role"  class="form-select form-control @error('role') is-invalid @enderror" aria-label="Rola"  name="role" required >
+                                    <option selected>Choose role...</option>
+                                    @foreach ($roles as $role)
+                                        <option :value="<?php echo $role->id; ?>">{{$role->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
