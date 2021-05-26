@@ -10,13 +10,14 @@
 
 <script>
 import { mdiApps } from '@mdi/js';
+
 export default {
-    data(){
-        return{
-            icons: {
-                mdiApps
-            }
-        }
-    }
-}
+  data() {
+    return {
+      icons: {
+        mdiApps,
+      },
+    };
+  },
+};
 </script>
