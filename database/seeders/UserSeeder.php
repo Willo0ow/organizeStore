@@ -15,6 +15,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::firstOrCreate(['name' => 'Admin','email'=>'admin@test.com','role'=>1, 'permission_group'=>1, 'password'=>Hash::make('admin123')]);
+        User::firstOrCreate(['name' => 'Admin'],['email'=>'admin@test.com','role'=>1, 'permission_group'=>1, 'password'=>Hash::make('admin123')]);
     }
 }
